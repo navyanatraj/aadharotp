@@ -1,0 +1,172 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - male
+- intent: report_birth_death
+  examples: |
+    - I want to report a birth
+    - Can you help me report a new birth?
+    - I need to inform you about a birth
+    - I want to register the birth of my child
+    - I just had a baby and need to report it
+    - I need to report the birth of my newborn
+    - Can you assist me in reporting a birth?
+    - I want to report the arrival of my new baby
+    - I would like to inform you of a birth
+    - I want to let you know about a new birth
+    - Can you help me report the birth of my child?
+    - I need to inform you of a new birth
+    - I want to register the arrival of my baby
+    - I would like to report the birth of my child
+    - I need to let you know about a new birth
+    - Can you assist me in reporting the birth of my child?
+    - I want to report the birth of my new baby
+    - I want to report a death
+    - Can you assist me in reporting a death?
+    - I need to inform you of a passing
+    - I want to register the death of my loved one
+    - I need to report the death of a family member
+    - Can you help me report a death?
+    - I would like to inform you of a death
+    - I want to let you know about a passing
+    - Can you assist me in reporting the death of a loved one?
+    - I need to inform you about a death
+    - A girl was born today
+    - A boy was born today
+    - A baby is born in our family
+    - Is there any fee for registration of births and deaths
+    - A baby was born today
+    - There has been an accident
+    - A person has died in front of me
+    - Someone has died today
+    - Someone has expired today
+    - My grandfather has expired today
+    - My grandfather died today
+    - My grandmother died today
+    - My father has expired today
+    - My mother has expired today
+    - My grandfather has expired
+    - My grandfather died yesterday
+    - My grandfather died a few days ago
+  
+- intent: self_enum 
+  examples: |
+    - Can you explain the process for registering for NPR?
+    - How do I go about registering for the National Population Register?
+    - What is the procedure for registering for NPR?
+    - Can you tell me the steps for registering for National Population Register?
+    - How can I register for NPR?
+    - Can you give me the process for registering for National Population Register?
+    - What are the requirements for registering for NPR?
+    - Can you outline the process for registering for National Population Register?
+    - What documents do I need to provide for registering for NPR?
+    - Can you provide the process for registering for National Population Register?
+    - What are the steps for self-enumeration for NPR?
+    - Can you explain the requirements for registering for National Population Register?
+    - How can I register for National Population Register?
+    - Can you provide the process for self-enumeration for NPR?
+    - What are the guidelines for registering for NPR?
+    - Can you give me the process for registering for National Population Register?
+    - What is the way to register for NPR?
+    - Can you outline the process for self-enumeration for National Population Register?
+    - How do I register for National Population Register?
+    - Can you provide the process for registering for NPR?
+    -  Can you tell me how I can self-enumerate for NPR?
+    - What is the process for registering for National Population Register through self-enumeration?
+    - How do I go about self-enumeration for NPR?
+    - Can you explain the procedure for self-enumeration for National Population Register?
+    - How can I register myself for NPR?
+    - Can you give me the steps for self-enumeration for National Population Register?
+    - I want to register for NPR, what is the process?
+    - Can you outline the process for self-enumeration for NPR?
+    - What documents do I need to provide for self-enumeration for NPR?
+    - Can you provide the process for registering for National Population Register through self-enumeration?
+    - What are the guidelines for self-enumeration for NPR?
+    - Can you give me the process for registering for NPR through self-enumeration?
+    - How can I self-enumerate for National Population Register?
+    - Can you provide the process for self-enumeration for National Population Register?
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - Niranjan vsks
+    - nakri981@gmail.com
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

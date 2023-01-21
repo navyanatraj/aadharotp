@@ -1,0 +1,166 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- report_birth_death
+- self_enum
+- request_names
+actions:
+- utter_greet
+- utter_slots_values
+- utter_npr_submit
+- utter_submit
+- validate_birth_death_form
+- validate_aadhar_val_form
+forms:
+  birth_death_form:
+    required_slots:
+    - full_name
+    - email_id
+    - date_of_event
+    - gender
+    - mobile_number
+    - state
+    - district
+  aadhar_val_form:
+    required_slots:
+    - aadhar_number
+    - otp_npr
+
+
+slots:
+  full_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: birth_death_form
+        requested_slot: full_name
+  email_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: birth_death_form
+        requested_slot: email_id
+  date_of_event:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: birth_death_form
+        requested_slot: date_of_event
+  gender:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: birth_death_form
+        requested_slot: gender
+  mobile_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: birth_death_form
+        requested_slot: mobile_number
+  state:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: birth_death_form
+        requested_slot: state
+  district:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: birth_death_form
+        requested_slot: district
+
+  otp_npr:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: aadhar_val_form
+        requested_slot: otp_npr
+
+  aadhar_number:
+   type: text
+   influence_conversation: true
+   mappings:
+   - type: from_text
+     conditions:
+     - active_loop: aadhar_val_form
+       requested_slot: aadhar_number          
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    
+  utter_did_that_help:
+  - text: Did that help you?
+
+
+  utter_ask_full_name:
+  - text: Please enter  your full name 
+ 
+
+  utter_ask_date_of_event:
+  - text: Please enter date of occurance of the event
+
+  utter_ask_email_id:
+  - text: Please enter your email id
+
+  utter_ask_mobile_number:
+  - text: Please enter your mobile number
+
+  utter_ask_gender:
+  - text: Please enter the gender of the person
+  
+  utter_ask_state:
+  - text: Please enter your state
+  
+  utter_ask_district:
+  - text: Please enter your district
+  
+  utter_ask_aadhar_number:
+  - text: Please enter your aadhar number
+
+  utter_ask_otp_npr:
+  - text: Please enter the One Time Password sent to your registered mobile number.
+
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  
+  utter_submit:
+  - text: Ok. Thanks!
+
+  utter_slots_values:
+  - text: Hey {full_name} , Thank you for reporting the event and contributing to our records. Have a nice day!
+  
+  utter_goodbye:
+  - text: Bye!
+
+  utter_npr_submit:
+  - text: OTP Validated Successfully  Here is the link to register for National Population Register link
+
